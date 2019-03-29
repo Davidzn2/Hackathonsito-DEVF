@@ -1,5 +1,4 @@
-var input = document.getElementById("valorComentario")
-var comentario = document.getElementById("comentario")
+var dato = document.getElementById("dato")
 class usuario{
     constructor(id, nombre, celular, delegacion, puntos, nivel){
         this.id = id
@@ -30,8 +29,22 @@ class usuario{
             puntosASumar = 20
         }
         this.puntos += puntosASumar
-        input.innerHTML = this.puntos;
+        dato.innerHTML = this.puntos;
     }
 }
 var david = new usuario(1, 'David', 55646, "MH", 5000, "Oro")
-comentario.addEventListener("click", david.sumaPuntos("comentario"))
+var botonComentario = () =>{
+    david.sumaPuntos("comentario")
+}
+var botonLike = () =>{
+    david.sumaPuntos("like")
+}
+var botonVideo = () =>{
+    david.sumaPuntos("video")
+}
+var botonMision = () =>{
+    david.sumaPuntos("mision_cumplida")
+}
+var botonCompartir = () =>{
+    david.sumaPuntos("compartir_video")
+}
